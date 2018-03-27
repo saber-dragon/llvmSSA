@@ -1,37 +1,23 @@
-#include <iostream>
+int main(int argc, char *argv[]) {
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    int x = 0, y = 1, z, w;
-    int a = 0, b, c = 0, d;
+    int a = argc;
+    int b = 10;
+    int c, d, e = 1;
 
-    std::cin >> w;
 
-    d = x + y;
+    goto L1;
 
-    if (w == 10) {
-        a = x + y;
-        c = x + y;
-        z = 10;
-    } else {
-        ++ x;
-        ++ y;
-        z = y * x;
+    L1: {
+        c = a + b;
+        d = c - a;
+        if (d) goto L2;
+        d = b * d;
+        e = e + 1;
     }
 
-    b = x + y;
-
-    if (z == 10 || z >= 100)
-        std::cout << "a = "
-                  << a
-                  << ", b = "
-                  << b
-                  << ", c = "
-                  << c
-                  << ", d = "
-                  << d
-                  << std::endl;
-
-
-    return 0;
+    L2: {
+        b = a + b;
+        e = c - a;
+        if (e) goto L1;
+    }
 }
