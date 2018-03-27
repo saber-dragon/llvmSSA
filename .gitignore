@@ -1,0 +1,4 @@
+cmake-build-debug
+*.dot
+*.bc
+build
