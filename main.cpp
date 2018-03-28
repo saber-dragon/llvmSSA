@@ -1,23 +1,34 @@
-int main(int argc, char *argv[]) {
+int foo(int a, int b){
+    int x, y, z, w, q;
+    x = a + b;
 
-    int a = argc;
-    int b = 10;
-    int c, d, e = 1;
-
-
-    goto L1;
-
-    L1: {
-        c = a + b;
-        d = c - a;
-        if (d) goto L2;
-        d = b * d;
-        e = e + 1;
+    if (x) {
+        y = a + b;
+        if (a * a + b * b >= 25) {
+            B4:
+            {
+                z = a + b;
+                goto EXIT;
+            }
+        } else {
+            goto B3;
+        }
+    } else {
+        q = a + b;
+        if (q * q > q) {
+            a = 2 * a + b;
+            b = 2 * b + a;
+            goto B3;
+        } else {
+            goto B4;
+        }
     }
 
-    L2: {
-        b = a + b;
-        e = c - a;
-        if (e) goto L1;
+    B3: {
+        w = a + b;
+        q = w * w - x;
+    }
+    EXIT: {
+        return q;
     }
 }
